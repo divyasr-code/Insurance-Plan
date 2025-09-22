@@ -6,44 +6,40 @@ import testData from '../fixtures/data.json';
 describe('Family Travel Insurance Test Suite', () => {
   const travelPage = new FamilyInsurancePage();
  
-  it.only('Find student travel insurance for 2 people (Europe), display 3 lowest plans', () => {
+  it('Find student travel insurance for 2 people (Europe), display 3 lowest plans', () => {
     cy.on('uncaught:exception', () => false);
- 
+    //1st user story
     travelPage.visitHomePage();
- 
     travelPage.navigateToTravelInsurance();
- 
     travelPage.selectSingleTripOption();
- 
+    //2nd user story
     travelPage.selectEuropeanCountry()
- 
     travelPage.fillTravelDatesAndDuration();
- 
+    //3rd user story
     travelPage.selectTravellersAndEnterMobile();
- 
     travelPage.enterTravellerDOBs();
- 
-    travelPage.logThreeLowestPlans(); // Modified step
- 
+    //4th user story
+    travelPage.logThreeLowestPlans(); 
+    //5th user story
     travelPage.fillTravellerForms();
- 
+    //6th user story
     travelPage.validateFormFields();
-   
+    //7th user story
     travelPage.submitPayment();
   });
 });
 
-describe('GoDigit Car Insurance Quote Flow', () => {
+describe('Car Insurance Quote Flow', () => {
   beforeEach(() => {
     travelPlan.visitHomePage();
     travelPlan.suppressExceptions();
   });
 
   it('Car insurance test cases', () => {
-    //1 user story
+    //8th user story
     travelPlan.navigateToCarInsurance();
     travelPlan.clickWithoutCarNumber();
-    //2 user story
+    //9th user story
     travelPlan.navigateToCarInsurance();
     travelPlan.enterQuoteDetails(testData.registrationNumber, testData.mobileNumber);
     travelPlan.clickGetQuoteButton();
@@ -52,9 +48,9 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     travelPlan.selectVariantAndDate(testData.variantId, testData.yearId, testData.monthId);
     travelPlan.selectCity(testData.cityId, testData.cityName);
     travelPlan.continueToDetails();
-    //3 user story
+    //10th user story
     travelPlan.enterInvalidContactDetails();
-    //4 user story
+    //11th user story
     travelPlan.enterValidContactDetails(testData.ownerName, testData.mobileNumber, testData.email);
     travelPlan.selectInsurer(testData.insurerName);
     travelPlan.enterNomineeDetails(testData.nomineeName, testData.nomineeRelation);
@@ -69,23 +65,21 @@ describe('Health Insurance Navigation Test Suite', () => {
     HealthInsurancePage.visitHomePage();
   });
  
-  it('Story 12: G-H-V Flow - Access Health Insurance from General dropdown', () => {
+  it('Health Insurance test cases', () => {
+    // user story 12
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.clickHealthInsuranceLabel();
-  });
- 
-  it('Story 13: Extract and store all Health Insurance submenu items', () => {
+    // user story 13
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.clickHealthInsuranceLabel();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.extractSubmenuItems();
-  });
- 
-  it('Story 14: Click Health Insurance link from right-side panel and verify page loads', () => {
+    // user story 14
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.clickHealthInsuranceLabel();
     HealthInsurancePage.clickRightPanelHealthLink();
     HealthInsurancePage.validateHealthInsurancePage();
   });
+ 
 });
