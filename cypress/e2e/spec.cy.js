@@ -57,6 +57,8 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     travelPlan.selectVariantAndDate(testData.variantId, testData.yearId, testData.monthId);
     travelPlan.selectCity(testData.cityId, testData.cityName);
     travelPlan.continueToDetails();
+    //3 user story
+    travelPlan.enterInvalidContactDetails();
   });
 
   //Bhavana 1st user story
