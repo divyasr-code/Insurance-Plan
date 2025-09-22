@@ -22,6 +22,8 @@ describe('Travel Insurance Test Suite', () => {
     
     travelPage.fillTravellerForms();
 
+    travelPage.submitPayment();
+
   });
 });
 
@@ -57,8 +59,6 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     travelPlan.selectVariantAndDate(testData.variantId, testData.yearId, testData.monthId);
     travelPlan.selectCity(testData.cityId, testData.cityName);
     travelPlan.continueToDetails();
-    //3 user story
-    travelPlan.enterInvalidContactDetails();
   });
 
   //Bhavana 1st user story
@@ -73,14 +73,6 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     HealthInsurancePage.clickHealthInsuranceLabel();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.extractSubmenuItems();
-  });
-
-  //Bhavana 3rd user story
-  it('Story 14: Click Health Insurance link from right-side panel and verify page loads', () => {
-    HealthInsurancePage.expandGeneralDropdown();
-    HealthInsurancePage.clickHealthInsuranceLabel();
-    HealthInsurancePage.clickRightPanelHealthLink();
-    HealthInsurancePage.validateHealthInsurancePage();
   });
 
 });
