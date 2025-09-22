@@ -11,14 +11,28 @@ describe('Travel Insurance Test Suite', () => {
     travelPage.visitHomePage();
     travelPage.navigateToTravelInsurance();
     travelPage.selectSingleTripOption();
+    travelPage.selectEuropeanCountry()
 
+    travelPage.fillTravelDatesAndDuration(); 
 
+  });
+});
+describe('GoDigit Car Insurance Quote Flow', () => {
+  beforeEach(() => {
+    travelPlan.visitHomePage();
+    travelPlan.suppressExceptions();
+  });
 
+  it('Car insurance test cases', () => {
+    //1 user story
+    travelPlan.navigateToCarInsurance();
+    travelPlan.clickWithoutCarNumber();
+  });
 
-    it('Story 12: G-H-V Flow - Access Health Insurance from General dropdown', () => {
+  //Bhavana
+  it('Story 12: G-H-V Flow - Access Health Insurance from General dropdown', () => {
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.clickHealthInsuranceLabel();
-  });
   });
 });
