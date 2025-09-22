@@ -19,6 +19,8 @@ describe('Travel Insurance Test Suite', () => {
  
     travelPage.enterTravellerDOBs();
 
+    
+
   });
 });
 
@@ -45,6 +47,15 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     //1 user story
     travelPlan.navigateToCarInsurance();
     travelPlan.clickWithoutCarNumber();
+    //2 user story
+    travelPlan.navigateToCarInsurance();
+    travelPlan.enterQuoteDetails(testData.registrationNumber, testData.mobileNumber);
+    travelPlan.clickGetQuoteButton();
+    travelPlan.selectCarModel(testData.carModelId);
+    travelPlan.selectFuelType();
+    travelPlan.selectVariantAndDate(testData.variantId, testData.yearId, testData.monthId);
+    travelPlan.selectCity(testData.cityId, testData.cityName);
+    travelPlan.continueToDetails();
   });
 
   //Bhavana 1st user story
