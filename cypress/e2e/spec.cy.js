@@ -17,6 +17,10 @@ describe('Travel Insurance Test Suite', () => {
 
     travelPage.fillTravelDatesAndDuration();
 
+    travelPage.selectTravellersAndEnterMobile();
+ 
+    travelPage.enterTravellerDOBs();
+
     
 
   });
