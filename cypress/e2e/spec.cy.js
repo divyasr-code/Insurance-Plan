@@ -18,12 +18,8 @@ describe('Travel Insurance Test Suite', () => {
     travelPage.selectTravellersAndEnterMobile();
  
     travelPage.enterTravellerDOBs();
-<<<<<<< HEAD
-
     
-=======
->>>>>>> d1bd457899f248857f9d4d3cc0657cfe90e5ee0c
-
+    travelPage.fillTravellerForms();
   });
 });
 
