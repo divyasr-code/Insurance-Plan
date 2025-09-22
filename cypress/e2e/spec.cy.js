@@ -13,16 +13,13 @@ describe('Travel Insurance Test Suite', () => {
     travelPage.selectSingleTripOption();
     travelPage.selectEuropeanCountry()
 
-    travelPage.fillTravelDatesAndDuration();
+    travelPage.fillTravelDatesAndDuration(); 
 
     travelPage.selectTravellersAndEnterMobile();
  
     travelPage.enterTravellerDOBs();
-<<<<<<< HEAD
 
     
-=======
->>>>>>> d1bd457899f248857f9d4d3cc0657cfe90e5ee0c
 
   });
 });
@@ -40,10 +37,6 @@ describe('GoDigit Car Insurance Quote Flow', () => {
   
   });
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 3cacd6efef0408bc4d619d871dadad4f09691694
 describe('GoDigit Car Insurance Quote Flow', () => {
   beforeEach(() => {
     travelPlan.visitHomePage();
@@ -54,7 +47,15 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     //1 user story
     travelPlan.navigateToCarInsurance();
     travelPlan.clickWithoutCarNumber();
-<<<<<<< HEAD
+    //2 user story
+    travelPlan.navigateToCarInsurance();
+    travelPlan.enterQuoteDetails(testData.registrationNumber, testData.mobileNumber);
+    travelPlan.clickGetQuoteButton();
+    travelPlan.selectCarModel(testData.carModelId);
+    travelPlan.selectFuelType();
+    travelPlan.selectVariantAndDate(testData.variantId, testData.yearId, testData.monthId);
+    travelPlan.selectCity(testData.cityId, testData.cityName);
+    travelPlan.continueToDetails();
   });
 
   //Bhavana 1st user story
@@ -62,9 +63,6 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.clickHealthInsuranceLabel();
-=======
-  
->>>>>>> 3cacd6efef0408bc4d619d871dadad4f09691694
   });
 
 });
