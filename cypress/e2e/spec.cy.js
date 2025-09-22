@@ -53,5 +53,12 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.clickHealthInsuranceLabel();
   });
+ //Bhavana 2nd user story
+  it('Story 13: Extract and store all Health Insurance submenu items', () => {
+    HealthInsurancePage.expandGeneralDropdown();
+    HealthInsurancePage.clickHealthInsuranceLabel();
+    HealthInsurancePage.waitForDropdownVisible();
+    HealthInsurancePage.extractSubmenuItems();
+  });
 
 });
