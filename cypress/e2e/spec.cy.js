@@ -75,4 +75,12 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     HealthInsurancePage.extractSubmenuItems();
   });
 
+  //Bhavana 3rd user story
+  it('Story 14: Click Health Insurance link from right-side panel and verify page loads', () => {
+    HealthInsurancePage.expandGeneralDropdown();
+    HealthInsurancePage.clickHealthInsuranceLabel();
+    HealthInsurancePage.clickRightPanelHealthLink();
+    HealthInsurancePage.validateHealthInsurancePage();
+  });
+
 });
