@@ -21,3 +21,15 @@ describe('Travel Insurance Test Suite', () => {
 
   });
 });
+describe('GoDigit Car Insurance Quote Flow', () => {
+  beforeEach(() => {
+    travelPlan.visitHomePage();
+    travelPlan.suppressExceptions();
+  });
+
+  it('Car insurance test cases', () => {
+    //1 user story
+    travelPlan.navigateToCarInsurance();
+    travelPlan.clickWithoutCarNumber();
+  });
+});
