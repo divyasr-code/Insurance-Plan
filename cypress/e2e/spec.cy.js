@@ -21,6 +21,10 @@ describe('Travel Insurance Test Suite', () => {
 
   });
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3cacd6efef0408bc4d619d871dadad4f09691694
 describe('GoDigit Car Insurance Quote Flow', () => {
   beforeEach(() => {
     travelPlan.visitHomePage();
@@ -31,6 +35,7 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     //1 user story
     travelPlan.navigateToCarInsurance();
     travelPlan.clickWithoutCarNumber();
+<<<<<<< HEAD
   });
 
   //Bhavana
@@ -38,5 +43,8 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.clickHealthInsuranceLabel();
+=======
+  
+>>>>>>> 3cacd6efef0408bc4d619d871dadad4f09691694
   });
 });
