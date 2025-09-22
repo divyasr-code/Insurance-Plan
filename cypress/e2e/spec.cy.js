@@ -21,6 +21,20 @@ describe('Travel Insurance Test Suite', () => {
 
   });
 });
+
+describe('GoDigit Car Insurance Quote Flow', () => {
+  beforeEach(() => {
+    travelPlan.visitHomePage();
+    travelPlan.suppressExceptions();
+  });
+
+  it('Car insurance test cases', () => {
+    //1 user story
+    travelPlan.navigateToCarInsurance();
+    travelPlan.clickWithoutCarNumber();
+  
+  });
+});
 describe('GoDigit Car Insurance Quote Flow', () => {
   beforeEach(() => {
     travelPlan.visitHomePage();
@@ -33,10 +47,11 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     travelPlan.clickWithoutCarNumber();
   });
 
-  //Bhavana
+  //Bhavana 1st user story
   it('Story 12: G-H-V Flow - Access Health Insurance from General dropdown', () => {
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.clickHealthInsuranceLabel();
   });
+
 });
