@@ -18,8 +18,10 @@ describe('Travel Insurance Test Suite', () => {
     travelPage.selectTravellersAndEnterMobile();
  
     travelPage.enterTravellerDOBs();
+
     
     travelPage.fillTravellerForms();
+
   });
 });
 
@@ -46,6 +48,15 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     //1 user story
     travelPlan.navigateToCarInsurance();
     travelPlan.clickWithoutCarNumber();
+    //2 user story
+    travelPlan.navigateToCarInsurance();
+    travelPlan.enterQuoteDetails(testData.registrationNumber, testData.mobileNumber);
+    travelPlan.clickGetQuoteButton();
+    travelPlan.selectCarModel(testData.carModelId);
+    travelPlan.selectFuelType();
+    travelPlan.selectVariantAndDate(testData.variantId, testData.yearId, testData.monthId);
+    travelPlan.selectCity(testData.cityId, testData.cityName);
+    travelPlan.continueToDetails();
   });
 
   //Bhavana 1st user story
@@ -53,6 +64,13 @@ describe('GoDigit Car Insurance Quote Flow', () => {
     HealthInsurancePage.expandGeneralDropdown();
     HealthInsurancePage.waitForDropdownVisible();
     HealthInsurancePage.clickHealthInsuranceLabel();
+  });
+ //Bhavana 2nd user story
+  it('Story 13: Extract and store all Health Insurance submenu items', () => {
+    HealthInsurancePage.expandGeneralDropdown();
+    HealthInsurancePage.clickHealthInsuranceLabel();
+    HealthInsurancePage.waitForDropdownVisible();
+    HealthInsurancePage.extractSubmenuItems();
   });
 
 });
