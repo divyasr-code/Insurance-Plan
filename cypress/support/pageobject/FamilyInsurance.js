@@ -58,4 +58,31 @@ export class TravelInsurancePage {
         .click({ force: true })
         .wait(3000);
   }
+
+  selectTravellersAndEnterMobile() {  
+      cy.contains('.traveller-sec div', '2').should('be.visible').click({ force: true });
+      cy.get('#car-mobile-number').clear().type('123').blur();
+      cy.get('#car-mobile-number').invoke('val').then(phno => {
+      const phnoRegex = /^[6-9]\d{9}$/;
+      if (!phnoRegex.test(phno)) {
+        cy.log(phno);
+        cy.get('#car-mobile-number').clear().type('9876543219').blur();
+      }
+    });
+      cy.get('button.view-price-btn:not(.disabled):not(.btn-loading)').should('be.visible')
+        .click({ force: true })
+        .wait(200)
+        .click({ force: true })
+        .wait(2000);
+  }  
+  enterTravellerDOBs() {
+      cy.get('#travellers').should('exist').should('be.visible').click({ force: true })
+        .type('19/09/1995', { force: true });
+ 
+      cy.get('.p-inputtext').eq(1).type('20/11/1990', { force: true });
+      cy.get('#continue-btn').should('be.visible').click()
+        .wait(200)
+        .click({ force: true })
+        .wait(2000);
+  }
 }
